@@ -38,7 +38,7 @@ class Home extends Component {
     if (loading) {
       return (
         <Loading>
-          <Loader type="MutatingDots" color="#FFFFFF" />
+          <Loader type="MutatingDots" color="#7159c1" />
         </Loading>
       );
     }

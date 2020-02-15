@@ -76,6 +76,6 @@ export const Loading = styled.div`
   svg {
     height: 150px;
     width: 100px;
-    fill: #fff;
+    fill: #7159c1;
   }
 `;
