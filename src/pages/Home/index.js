@@ -3,7 +3,10 @@ import { connect } from 'react-redux';
 
 import { bindActionCreators } from 'redux';
 import { MdAddShoppingCart } from 'react-icons/md';
-import { ProductList } from './styles';
+
+import Loader from 'react-loader-spinner';
+import { ProductList, Loading } from './styles';
+
 import { formatPrice } from '../../util/format';
 import api from '../../services/api';
 import * as CartActions from '../../store/modules/cart/actions';
@@ -12,6 +15,7 @@ class Home extends Component {
   // eslint-disable-next-line react/state-in-constructor
   state = {
     products: [],
+    loading: true,
   };
 
   async componentDidMount() {
@@ -20,7 +24,7 @@ class Home extends Component {
       ...product,
       priceFormatted: formatPrice(product.price),
     }));
-    this.setState({ products: data });
+    this.setState({ products: data, loading: false });
   }
 
   handleAddProduct = id => {
@@ -29,8 +33,15 @@ class Home extends Component {
   };
 
   render() {
-    const { products } = this.state;
+    const { products, loading } = this.state;
     const { amount } = this.props;
+    if (loading) {
+      return (
+        <Loading>
+          <Loader type="MutatingDots" color="#FFFFFF" />
+        </Loading>
+      );
+    }
     return (
       <ProductList>
         {products.map(product => (

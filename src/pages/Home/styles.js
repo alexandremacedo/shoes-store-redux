@@ -13,6 +13,7 @@ export const ProductList = styled.ul`
     background: #fff;
     border-radius: 4px;
     padding: 20px;
+    box-shadow: -1px 1px 3px 1px rgba(0, 0, 0, 0.07);
 
     img {
       align-self: center;
@@ -63,5 +64,18 @@ export const ProductList = styled.ul`
         font-weight: bold;
       }
     }
+  }
+`;
+
+export const Loading = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 450px;
+
+  svg {
+    height: 150px;
+    width: 100px;
+    fill: #fff;
   }
 `;

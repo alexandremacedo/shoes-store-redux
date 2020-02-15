@@ -4,10 +4,13 @@ import { connect } from 'react-redux';
 import {
   MdRemoveCircleOutline,
   MdAddCircleOutline,
+  MdRemoveShoppingCart,
   MdDelete,
 } from 'react-icons/md';
+
+import { Link } from 'react-router-dom';
 import { formatPrice } from '../../util/format';
-import { Container, ProductTable, Total } from './styles';
+import { Container, ProductTable, Total, EmptyCart } from './styles';
 
 import * as CartActions from '../../store/modules/cart/actions';
 
@@ -17,6 +20,21 @@ function Cart({ cart, total, removeFromCart, updateAmountRequest }) {
   }
   function decrement(product) {
     updateAmountRequest(product.id, product.amount - 1);
+  }
+
+  if (!cart.length) {
+    return (
+      <Container>
+        <EmptyCart>
+          <MdRemoveShoppingCart size={140} />
+          <h2>O CARRINHO ESTÁ VAZIO</h2>
+          <p>Não há produtos em seu carrinho de compras</p>
+          <Link to="/">
+            <button type="button">Continue comprando</button>
+          </Link>
+        </EmptyCart>
+      </Container>
+    );
   }
 
   return (
@@ -44,11 +62,11 @@ function Cart({ cart, total, removeFromCart, updateAmountRequest }) {
               <td>
                 <div>
                   <button type="button" onClick={() => decrement(product)}>
-                    <MdRemoveCircleOutline size={20} color="7159c1" />
+                    <MdRemoveCircleOutline size={20} color="#7159c1" />
                   </button>
-                  <input type="number" readOnly value={product.amount} />
+                  <input type="text" readOnly value={product.amount} />
                   <button type="button" onClick={() => increment(product)}>
-                    <MdAddCircleOutline size={20} color="7159c1" />
+                    <MdAddCircleOutline size={20} color="#7159c1" />
                   </button>
                 </div>
               </td>
