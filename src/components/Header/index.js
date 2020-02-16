@@ -15,7 +15,7 @@ function Header({ cartSize, cart, total, location }) {
         <img src={logo} alt="Logo" />
       </Link>
       <Cart to="/cart">
-        <strong>My cart</strong>
+        <strong>Carrinho</strong>
 
         <div>
           <MdShoppingCart size={36} color="#fff" />

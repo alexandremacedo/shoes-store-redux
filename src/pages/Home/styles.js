@@ -1,11 +1,17 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
 
+export const Container = styled.div`
+  display: flex;
+`;
+
 export const ProductList = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   list-style: none;
+  margin: 0 auto;
+  max-width: 1020px;
 
   li {
     display: flex;
@@ -20,11 +26,12 @@ export const ProductList = styled.ul`
       max-width: 250px;
     }
 
-    > strong {
+    > a {
       font-size: 16px;
       line-height: 20px;
       color: #333;
       margin-top: 5px;
+      text-decoration: none;
     }
 
     > span {

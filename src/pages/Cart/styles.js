@@ -2,10 +2,15 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 export const Container = styled.div`
+  display: flex;
+`;
+
+export const CartContainer = styled.div`
   padding: 30px;
   background: #fff;
   border-radius: 4px;
-
+  margin: 0 auto;
+  width: 1020px;
   box-shadow: -1px 1px 3px 1px rgba(0, 0, 0, 0.07);
 
   footer {

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { MdAddShoppingCart } from 'react-icons/md';
 
 import Loader from 'react-loader-spinner';
-import { ProductList, Loading } from './styles';
+import { ProductList, Container, Loading } from './styles';
 
 import { formatPrice } from '../../util/format';
 import api from '../../services/api';
@@ -24,7 +24,9 @@ class Home extends Component {
       ...product,
       priceFormatted: formatPrice(product.price),
     }));
-    this.setState({ products: data, loading: false });
+    setTimeout(() => {
+      this.setState({ products: data, loading: false });
+    }, 1000);
   }
 
   handleAddProduct = id => {
@@ -43,27 +45,33 @@ class Home extends Component {
       );
     }
     return (
-      <ProductList>
-        {products.map(product => (
-          <li key={product.id}>
-            <img src={product.image} alt={product.title} />
-            <strong>{product.title}</strong>
-            <span>{product.priceFormatted}</span>
+      <Container>
+        <ProductList>
+          {products.map(product => (
+            <li key={product.id}>
+              <Link to={`/products/${encodeURIComponent(product.id)}`}>
+                <img src={product.image} alt={product.title} />
+              </Link>
+              <Link to={`/products/${encodeURIComponent(product.id)}`}>
+                <strong>{product.title}</strong>
+              </Link>
+              <span>{product.priceFormatted}</span>
 
-            <button
-              type="button"
-              onClick={() => this.handleAddProduct(product.id)}
-            >
-              <div>
-                <MdAddShoppingCart size={16} color="#fff" />{' '}
-                {amount[product.id] || 0}
-              </div>
+              <button
+                type="button"
+                onClick={() => this.handleAddProduct(product.id)}
+              >
+                <div>
+                  <MdAddShoppingCart size={16} color="#fff" />{' '}
+                  {amount[product.id] || 0}
+                </div>
 
-              <span>ADICIONAR AO CARRINHO</span>
-            </button>
-          </li>
-        ))}
-      </ProductList>
+                <span>ADICIONAR AO CARRINHO</span>
+              </button>
+            </li>
+          ))}
+        </ProductList>
+      </Container>
     );
   }
 }
