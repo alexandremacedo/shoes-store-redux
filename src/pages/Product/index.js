@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
-import { MdAddShoppingCart, MdCheck } from 'react-icons/md';
+import {
+  MdAddShoppingCart,
+  MdCheck,
+  MdKeyboardArrowUp,
+  MdKeyboardArrowDown,
+} from 'react-icons/md';
 
 import Loader from 'react-loader-spinner';
+import Modal from '../../components/Modal';
 import {
   Container,
   Product,
@@ -15,6 +21,8 @@ import {
   Description,
   SimilarList,
   Similar,
+  SwipeContainer,
+  Slider,
 } from './styles';
 
 import { formatPrice } from '../../util/format';
@@ -28,6 +36,8 @@ class Home extends Component {
     product: {},
     loading: true,
     url: '',
+    show: false,
+    hideModal: true,
   };
 
   async componentDidMount() {
@@ -63,21 +73,56 @@ class Home extends Component {
     this.setState({ url });
   };
 
+  showModal = e => {
+    this.setState({
+      show: !this.state.show,
+    });
+  };
+
   render() {
-    const { product, loading, url } = this.state;
+    const { product, loading, url, show } = this.state;
     const { amount } = this.props;
     if (loading) {
       return (
         <Loading>
-          <Loader type="MutatingDots" color="#7159c1" />
+          <Loader type="MutatingDots" color="#ff9f26" />
         </Loading>
       );
     }
     return (
       <Container>
+        <Modal onClose={this.showModal} show={show}>
+          {url}
+        </Modal>
         <Product>
           <div>
-            <img src={url} alt={product.title} />
+            <SwipeContainer>
+              {product.previews.length ? (
+                <button type="button">
+                  <MdKeyboardArrowUp size={20} color="#fff" />
+                </button>
+              ) : null}
+              <Slider>
+                {product.previews.map(preview => (
+                  <li>
+                    <img src={preview.image} alt={preview.id} />
+                  </li>
+                ))}
+              </Slider>
+              {product.previews.length ? (
+                <button type="button">
+                  <MdKeyboardArrowDown size={20} color="#fff" />
+                </button>
+              ) : null}
+            </SwipeContainer>
+            <button
+              type="button"
+              onClick={e => {
+                this.showModal(e);
+              }}
+            >
+              <img src={url} alt={product.title} />
+            </button>
           </div>
           <div>
             <strong>{product.title}</strong>

@@ -62,20 +62,24 @@ function Cart({ cart, total, removeFromCart, updateAmountRequest }) {
             {cart.map(product => (
               <tr>
                 <td>
-                  <img src={product.image} alt={product.title} />
+                  <Link to={`/products/${encodeURIComponent(product.id)}`}>
+                    <img src={product.image} alt={product.title} />
+                  </Link>
                 </td>
                 <td>
-                  <strong>{product.title}</strong>
+                  <Link to={`/products/${encodeURIComponent(product.id)}`}>
+                    <strong>{product.title}</strong>
+                  </Link>
                   <span>{product.priceFormatted}</span>
                 </td>
                 <td>
                   <div>
                     <button type="button" onClick={() => decrement(product)}>
-                      <MdRemoveCircleOutline size={20} color="#7159c1" />
+                      <MdRemoveCircleOutline size={20} color="#ff9f26" />
                     </button>
                     <input type="text" readOnly value={product.amount} />
                     <button type="button" onClick={() => increment(product)}>
-                      <MdAddCircleOutline size={20} color="#7159c1" />
+                      <MdAddCircleOutline size={20} color="#ff9f26" />
                     </button>
                   </div>
                 </td>
@@ -87,7 +91,7 @@ function Cart({ cart, total, removeFromCart, updateAmountRequest }) {
                     type="button"
                     onClick={() => removeFromCart(product.id)}
                   >
-                    <MdDelete size={20} color="#7159c1" />
+                    <MdDelete size={20} color="#ff9f26" />
                   </button>
                 </td>
               </tr>

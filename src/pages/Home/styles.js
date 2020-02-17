@@ -3,6 +3,7 @@ import { darken } from 'polished';
 
 export const Container = styled.div`
   display: flex;
+  padding-bottom: 200px;
 `;
 
 export const ProductList = styled.ul`
@@ -23,14 +24,14 @@ export const ProductList = styled.ul`
 
     img {
       align-self: center;
-      max-width: 250px;
+      max-width: 100%;
+      margin-bottom: 10px;
     }
 
     > a {
       font-size: 16px;
       line-height: 20px;
       color: #333;
-      margin-top: 5px;
       text-decoration: none;
     }
 
@@ -41,7 +42,7 @@ export const ProductList = styled.ul`
     }
 
     button {
-      background: #7159c1;
+      background: #ff9f26;
       color: #fff;
       border: 0;
       border-radius: 4px;
@@ -52,7 +53,7 @@ export const ProductList = styled.ul`
       transition: background 0.2s;
 
       &:hover {
-        background: ${darken(0.03, '#7159c1')};
+        background: ${darken(0.03, '#ff9f26')};
       }
 
       div {
@@ -83,6 +84,6 @@ export const Loading = styled.div`
   svg {
     height: 150px;
     width: 100px;
-    fill: #7159c1;
+    fill: #ff9f26;
   }
 `;

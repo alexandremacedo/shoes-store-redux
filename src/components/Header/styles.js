@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import { darken } from 'polished';
+import { lighten } from 'polished';
 
 export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 50px auto;
-  width: 1020px;
+  padding: 0 100px;
+  width: 100%;
 `;
 
 export const Cart = styled(Link)`
@@ -42,7 +43,7 @@ export const Cart = styled(Link)`
       position: absolute;
       width: 20px;
       height: 20px;
-      background: #7159c1;
+      background: #ff9f26;
       right: -4px;
       top: -8px;
       font-size: 12px;
@@ -61,7 +62,7 @@ export const Dropdown = styled.div`
   top: 100%;
   right: 0;
   margin-top: 10px;
-  background: #7159c1;
+  background: ${lighten(0.2, '#141419')};
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
   z-index: 5;
   width: 400px;
@@ -78,7 +79,6 @@ export const Dropdown = styled.div`
     img {
       border-radius: 3px;
       width: 50px;
-      padding: 5px;
       align-self: flex-start;
       background: #fff;
     }

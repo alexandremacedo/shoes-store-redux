@@ -1,6 +1,7 @@
 <h1 align="center" >
-  <img alt="Github" title="Github" src=".github/logo.png" width="150px"/>
+  <img alt="Github" title="Github" src=".github/logo.svg" width="450px"/>
 </h1>
+
 
 <h3 align="center">
   Shoes store
@@ -22,6 +23,13 @@
   <a href="https://github.com/AlexandreMacedoo/shoes-store-redux/stargazers">
     <img alt="Stargazers" src="https://img.shields.io/github/stars/AlexandreMacedoo/shoes-store-redux?style=social">
   </a>
+</p>
+
+<p align="center">
+  <a href="#pré-requisitos">Pré requisitos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#prévia">Prévia</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#license">Licença</a>
 </p>
 
 # shoes-store-redux
@@ -64,10 +72,13 @@ yarn start
 
 ## Prévia
 <p align="left">
-  <img alt="Home users" src=".github/previa1.png" width="550px">
+  <img alt="Home" src=".github/previa1-new.png" width="550px">
 </p>
 <p align="left">
-  <img alt="Home users" src=".github/previa2.png" width="550px">
+  <img alt="Cart" src=".github/previa2-new.png" width="550px">
+</p>
+<p align="left">
+  <img alt="Product" src=".github/previa3-new.png" width="550px">
 </p>
 ## :rocket: Technologies
 

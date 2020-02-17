@@ -20,7 +20,7 @@ export const CartContainer = styled.div`
     align-items: center;
 
     button {
-      background: #7159c1;
+      background: #ff9f26;
       color: #fff;
       border: 0;
       border-radius: 4px;
@@ -30,7 +30,7 @@ export const CartContainer = styled.div`
       transition: background 0.2s;
 
       &:hover {
-        background: ${darken(30.03, '#7159c1')};
+        background: ${darken(30.03, '#ff9f26')};
       }
     }
   }
@@ -46,6 +46,10 @@ export const ProductTable = styled.table`
   tbody td {
     padding: 12px;
     border-bottom: 1px solid #eee;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   img {
@@ -120,7 +124,7 @@ export const EmptyCart = styled.div`
   }
 
   button {
-    background: #7159c1;
+    background: #ff9f26;
     color: #fff;
     border: 0;
     border-radius: 4px;
@@ -130,7 +134,7 @@ export const EmptyCart = styled.div`
     transition: background 0.2s;
 
     &:hover {
-      background: ${darken(30.03, '#7159c1')};
+      background: ${darken(30.03, '#ff9f26')};
     }
   }
 `;

@@ -5,6 +5,7 @@ import { darken } from 'polished';
 export const Container = styled.div`
   background: #fff;
   padding: 0px;
+
   margin-bottom: 100px;
 `;
 
@@ -17,15 +18,21 @@ export const Product = styled.div`
     background: #ebedee;
     align-items: center;
     justify-content: center;
-    img {
-      width: 500px;
+    > button {
+      border: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      img {
+        width: 80vh;
+      }
     }
   }
 
   > div:last-child {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 30px;
     width: 30%;
 
     > strong {
@@ -45,7 +52,7 @@ export const Product = styled.div`
     }
 
     > button {
-      background: #7159c1;
+      background: #ff9f26;
       color: #fff;
       border: 0;
       border-radius: 4px;
@@ -57,7 +64,7 @@ export const Product = styled.div`
       transition: background 0.2s;
 
       &:hover {
-        background: ${darken(0.03, '#7159c1')};
+        background: ${darken(0.03, '#ff9f26')};
       }
 
       div {
@@ -89,7 +96,7 @@ export const Loading = styled.div`
   svg {
     height: 150px;
     width: 100px;
-    fill: #7159c1;
+    fill: #ff9f26;
   }
 `;
 
@@ -229,7 +236,7 @@ export const SimilarList = styled.ul`
   flex-direction: row;
   justify-content: space-between;
 
-  li {
+  > li {
     display: inline-block;
     background: #fff;
     flex-direction: row;
@@ -249,6 +256,38 @@ export const SimilarList = styled.ul`
       font-size: 14px;
       font-weight: bold;
       margin: 5px 0 20px;
+    }
+  }
+`;
+
+export const SwipeContainer = styled.div`
+  position: absolute;
+  width: 53px;
+  margin-left: 20px;
+  left: 0;
+  > button {
+    margin: 5px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #141419;
+    width: 52px;
+    border: 0;
+    color: #000;
+  }
+`;
+
+export const Slider = styled.ul`
+  list-style: none;
+  > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    > img {
+      border: 1px solid #000;
+      max-width: 52px;
+      cursor: pointer;
     }
   }
 `;

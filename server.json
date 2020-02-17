@@ -40,48 +40,6 @@
   "products": [
     {
       "id": 1,
-      "title": "Tênis de Caminhada Leve Confortável",
-      "price": 179.9,
-      "installments": 5,
-      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg"
-    },
-    {
-      "id": 2,
-      "title": "Tênis VR Caminhada Confortável Detalhes Couro Masculino",
-      "price": 139.9,
-      "installments": 5,
-      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis2.jpg"
-    },
-    {
-      "id": 3,
-      "title": "Tênis Adidas Duramo Lite 2.0",
-      "price": 219.9,
-      "installments": 5,
-      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis3.jpg"
-    },
-    {
-      "id": 5,
-      "title": "Tênis VR Caminhada Confortável Detalhes Couro Masculino",
-      "price": 139.9,
-      "installments": 5,
-      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis2.jpg"
-    },
-    {
-      "id": 6,
-      "title": "Tênis Adidas Duramo Lite 2.0",
-      "price": 219.9,
-      "installments": 5,
-      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis3.jpg"
-    },
-    {
-      "id": 4,
-      "title": "Tênis de Caminhada Leve Confortável",
-      "price": 179.9,
-      "installments": 5,
-      "image": "https://assets.adidas.com/images/w_2000,h_2000,f_auto,q_auto:sensitive,fl_lossy/d2419a26a8ee42569b4daaaa0100fd70_9366/Tenis_Edge_Gameday_Preto_EE4169_01_standard.jpg"
-    },
-    {
-      "id": 7,
       "title": "TÊNIS EASY VULC 2.0",
       "price": 199.99,
       "installments": 5,
@@ -102,7 +60,170 @@
         40,
         41,
         42
+      ],
+      "previews": [
+        {
+          "id": 1,
+          "image": "https://assets.adidas.com/images/w_54,h_54,f_auto,q_auto:sensitive,fl_lossy/41609ddf92054b9fb259a87f00af5ca2_9366/Tenis_EASY_VULC_2.0_Preto_DB0002_01_standard.jpg"
+        },
+        {
+          "id": 2,
+          "image": "https://assets.adidas.com/images/w_54,h_54,f_auto,q_auto:sensitive,fl_lossy/a41063b55ac2466a958ea87f00af7052_9366/Tenis_EASY_VULC_2.0_Preto_DB0002_02_standard.jpg"
+        },
+        {
+          "id": 3,
+          "image": "https://assets.adidas.com/images/w_54,h_54,f_auto,q_auto:sensitive,fl_lossy/df3f840d81604dc59969a87f00af7a45_9366/Tenis_EASY_VULC_2.0_Preto_DB0002_03_standard.jpg"
+        },
+        {
+          "id": 4,
+          "image": "https://assets.adidas.com/images/w_54,h_54,f_auto,q_auto:sensitive,fl_lossy/176d5235c3dc4dca9437a87f00af83b6_9366/Tenis_EASY_VULC_2.0_Preto_DB0002_04_standard.jpg"
+        },
+        {
+          "id": 5,
+          "image": "https://assets.adidas.com/images/w_54,h_54,f_auto,q_auto:sensitive,fl_lossy/715c1a16c5714a6894f9a87f00af8e97_9366/Tenis_EASY_VULC_2.0_Preto_DB0002_05_standard.jpg"
+        },
+        {
+          "id": 6,
+          "image": "https://assets.adidas.com/images/w_54,h_54,f_auto,q_auto:sensitive,fl_lossy/9b811c2338964645ae89a87f00af665d_9366/Tenis_EASY_VULC_2.0_Preto_DB0002_06_standard.jpg"
+        }
       ]
+    },
+    {
+      "id": 2,
+      "title": "TÊNIS 3MC VULC",
+      "price": 279.9,
+      "installments": 5,
+      "image": "https://assets.adidas.com/images/w_2000,h_2000,f_auto,q_auto:sensitive,fl_lossy/20c0a73f8c434ad58e43a888014104e0_9366/Tenis_3MC_Vulc_Preto_B22713_01_standard.jpg",
+      "colors": [
+        {
+          "name": "CORE BLACK",
+          "image": "https://assets.adidas.com/images/w_2000,h_2000,f_auto,q_auto:sensitive,fl_lossy/20c0a73f8c434ad58e43a888014104e0_9366/Tenis_3MC_Vulc_Preto_B22713_01_standard.jpg"
+        },
+        {
+          "name": "CLOUD WHITE",
+          "image": "https://assets.adidas.com/images/w_2000,h_2000,f_auto,q_auto:sensitive,fl_lossy/30763fe1599d438ab4eba89100352700_9366/Tenis_3MC_Vulc_Branco_B22705_01_standard.jpg"
+        },
+        {
+          "name": "LIGHT SOLID GREY",
+          "image": "https://assets.adidas.com/images/w_2000,h_2000,f_auto,q_auto:sensitive,fl_lossy/9f9f03ed47c4413fb789a9380158dc16_9366/Tenis_3MC_Vulc_Cinza_DB3105_01_standard.jpg"
+        }
+      ],
+      "sizes": [
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "previews": []
+    },
+    {
+      "id": 3,
+      "title": "TÊNIS SEELEY",
+      "price": 219.9,
+      "installments": 5,
+      "image": "https://assets.adidas.com/images/w_2000,h_2000,f_auto,q_auto:sensitive,fl_lossy/98ab0f134a52443d8e11aa0b001e7760_9366/Tenis_Seeley_Preto_EE6136_01_standard.jpg",
+      "colors": [
+        {
+          "name": "CORE BLACK",
+          "image": "https://assets.adidas.com/images/w_2000,h_2000,f_auto,q_auto:sensitive,fl_lossy/98ab0f134a52443d8e11aa0b001e7760_9366/Tenis_Seeley_Preto_EE6136_01_standard.jpg"
+        },
+        {
+          "name": "COLLEGIATE BURGUNDY",
+          "image": "https://assets.adidas.com/images/w_2000,h_2000,f_auto,q_auto:sensitive,fl_lossy/1f0b6d0143304076a167aa09016bb602_9366/Tenis_Seeley_Borgonha_EE6135_01_standard.jpg"
+        },
+        {
+          "name": "ASH",
+          "image": "https://assets.adidas.com/images/w_2000,h_2000,f_auto,q_auto:sensitive,fl_lossy/ac5bdaad22314ce695d4a81a018569ad_9366/Tenis_Seeley_Bege_AQ8528_01_standard.jpg"
+        }
+      ],
+      "sizes": [
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "previews": []
+    },
+    {
+      "id": 4,
+      "title": "TÊNIS VL COURT",
+      "price": 179.9,
+      "installments": 4,
+      "image": "https://assets.adidas.com/images/w_2000,h_2000,f_auto,q_auto:sensitive,fl_lossy/8c8bc0d27e8b4b18b4c5aa9500cb3bde_9366/Tenis_VL_Court_Azul_EE6894_01_standard.jpg",
+      "colors": [
+        {
+          "name": "LEGEND INK",
+          "image": "https://assets.adidas.com/images/w_2000,h_2000,f_auto,q_auto:sensitive,fl_lossy/8c8bc0d27e8b4b18b4c5aa9500cb3bde_9366/Tenis_VL_Court_Azul_EE6894_01_standard.jpg"
+        },
+        {
+          "name": "RAW WHITE",
+          "image": "https://assets.adidas.com/images/w_2000,h_2000,f_auto,q_auto:sensitive,fl_lossy/ba802ca9cf1e4ef5a9eeaa9500c363ca_9366/Tenis_VL_Court_Branco_EE6893_01_standard.jpg"
+        }
+      ],
+      "sizes": [
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "previews": []
+    },
+    {
+      "id": 5,
+      "title": "TÊNIS SABALO",
+      "price": 349.99,
+      "installments": 8,
+      "image": "https://assets.adidas.com/images/w_2000,h_2000,f_auto,q_auto:sensitive,fl_lossy/2c307c4fa1a143ecbc90aab901742131_9366/Tenis_Sabalo_Preto_EF8500_01_standard.jpg",
+      "colors": [
+        {
+          "name": "CORE BLACK",
+          "image": "https://assets.adidas.com/images/w_2000,h_2000,f_auto,q_auto:sensitive,fl_lossy/2c307c4fa1a143ecbc90aab901742131_9366/Tenis_Sabalo_Preto_EF8500_01_standard.jpg"
+        },
+        {
+          "name": "LEGEND INK",
+          "image": "https://assets.adidas.com/images/w_2000,h_2000,f_auto,q_auto:sensitive,fl_lossy/7e4007008e1845b5b1c4aa9c0105b194_9366/Tenis_Sabalo_Azul_EG2778_01_standard.jpg"
+        },
+        {
+          "name": "SKY TINT",
+          "image": "https://assets.adidas.com/images/w_2000,h_2000,f_auto,q_auto:sensitive,fl_lossy/61fefc8e1c5b4ae0bf52aa9c01149890_9366/Tenis_Sabalo_Azul_EG2777_01_standard.jpg"
+        }
+      ],
+      "sizes": [
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "previews": []
+    },
+    {
+      "id": 6,
+      "title": "TÊNIS CLOUDFOAM PURE",
+      "price": 279.99,
+      "installments": 7,
+      "image": "https://assets.adidas.com/images/w_2000,h_2000,f_auto,q_auto:sensitive,fl_lossy/49caee12dd024c7aaf39ab06011cde80_9366/Tenis_Cloudfoam_Pure_Bege_EG3819_01_standard.jpg",
+      "colors": [
+        {
+          "name": "LINEM",
+          "image": "https://assets.adidas.com/images/w_2000,h_2000,f_auto,q_auto:sensitive,fl_lossy/49caee12dd024c7aaf39ab06011cde80_9366/Tenis_Cloudfoam_Pure_Bege_EG3819_01_standard.jpg"
+        },
+        {
+          "name": "MATTE SILVER",
+          "image": "https://assets.adidas.com/images/w_2000,h_2000,f_auto,q_auto:sensitive,fl_lossy/8ac9ff914c1c43faa1deaa4300dca159_9366/Tenis_Cloudfoam_Pure_Cinza_EE8078_01_standard.jpg"
+        }
+      ],
+      "sizes": [
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "previews": []
     }
   ]
 }
