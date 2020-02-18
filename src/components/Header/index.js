@@ -1,6 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { Link, useLocation } from 'react-router-dom';
 
 import { MdShoppingCart } from 'react-icons/md';
 import { formatPrice } from '../../util/format';
@@ -8,7 +8,30 @@ import { formatPrice } from '../../util/format';
 import { Container, Cart, Dropdown } from './styles';
 import logo from '../../assets/images/logo.svg';
 
-function Header({ cartSize, cart, total, location }) {
+export default function Header() {
+  const cartSize = useSelector(state =>
+    state.cart.reduce((total, product) => {
+      return total + product.amount;
+    }, 0)
+  );
+
+  const cart = useSelector(state =>
+    state.cart.slice(0, 3).map(product => ({
+      ...product,
+      priceFormatted: formatPrice(product.price),
+    }))
+  );
+
+  const total = useSelector(state =>
+    formatPrice(
+      state.cart.reduce((sumTotal, product) => {
+        return sumTotal + product.price * product.amount;
+      }, 0)
+    )
+  );
+
+  const location = useLocation().pathname;
+
   return (
     <Container>
       <Link to="/">
@@ -22,7 +45,7 @@ function Header({ cartSize, cart, total, location }) {
           <span>{cartSize}</span>
         </div>
 
-        {cart.length && location.pathname !== '/cart' ? (
+        {cartSize && location !== '/cart' ? (
           <Dropdown>
             {cart.map(product => (
               <div>
@@ -30,7 +53,7 @@ function Header({ cartSize, cart, total, location }) {
                 <div>
                   {product.title}
                   <p>
-                    {product.amount} x<span> {formatPrice(product.price)}</span>
+                    {product.amount} x<span> {product.priceFormatted}</span>
                   </p>
                 </div>
               </div>
@@ -46,21 +69,3 @@ function Header({ cartSize, cart, total, location }) {
     </Container>
   );
 }
-
-const mapStateToProps = state => ({
-  cartSize: state.cart.reduce((total, product) => {
-    return total + product.amount;
-  }, 0),
-  cart: state.cart.slice(0, 3).map(product => ({
-    ...product,
-    price: product.price,
-  })),
-
-  total: formatPrice(
-    state.cart.reduce((total, product) => {
-      return total + product.price * product.amount;
-    }, 0)
-  ),
-});
-
-export default connect(mapStateToProps)(withRouter(Header));

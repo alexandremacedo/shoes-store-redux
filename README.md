@@ -8,7 +8,7 @@
 </h3>
 
 <h4 align="center">
-  ReactJS + Redux
+  ReactJS + Redux + Hooks
 </h4>
 
 <p align="center">
@@ -33,7 +33,7 @@
 </p>
 
 # shoes-store-redux
-Shoes store created with React + Redux + ReduxSaga.
+Shoes store created with React + Redux + ReduxSaga + Hooks.
 
 ## Pré requisitos
 
