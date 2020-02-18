@@ -80,6 +80,7 @@ yarn start
 <p align="left">
   <img alt="Product" src=".github/previa3-new.png" width="550px">
 </p>
+
 ## :rocket: Technologies
 
 This project was developed with the following technologies:
@@ -95,10 +96,10 @@ This project was developed with the following technologies:
 -  [React-Toastify](https://fkhadra.github.io/react-toastify/)
 -  [styled-components](https://www.styled-components.com/)
 -  [React-Icons](https://react-icons.netlify.com/)
--  [react-loading-skeleton](https://github.com/dvtng/react-loading-skeleton)
 -  [react-loader-spinner](https://github.com/mhnpd/react-loader-spinner)
 -  [json-server](https://github.com/typicode/json-server)
 -  [Reactotron](https://infinite.red/reactotron)
+-  [React-image-magnify](https://www.npmjs.com/package/react-image-magnify)
 -  [VS Code][vc] with [EditorConfig][vceditconfig] and [ESLint][vceslint]
 
 ## Consulte a documentação
