@@ -33,7 +33,7 @@
 </p>
 
 # shoes-store-redux
-Shoes store created with React + Redux + ReduxSaga + Hooks.
+Shoes store created with React + Redux + Hooks + ReduxSaga.
 
 ## Pré requisitos
 
